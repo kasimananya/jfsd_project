@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Courses - Student Dashboard</title>
+    <style>
+        /* Main Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 220px;
+            background-color: #2e8b57;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .navbar ul li {
+            margin: 15px 0;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #3aa472;
+        }
+
+        /* Content Area */
+        .content {
+            margin-left: 240px;
+            padding: 30px;
+            background-color: #fff;
+            width: calc(100% - 240px);
+            min-height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Courses Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Individual Course Card */
+        .course-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #2e8b57;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .course-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .course-card button {
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course-card button:hover {
+            background-color: #3aa472;
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #2e8b57;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #3aa472;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Student</h1>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Select Courses</a></li>
+            <li><a href="#">My Courses</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <h2>Available Courses</h2>
+
+        <!-- Courses Grid -->
+        <div class="courses-grid">
+            <!-- Course Card 1 -->
+            <div class="course-card">
+                <h3>Introduction to Computer Science</h3>
+                <p>This course provides a comprehensive introduction to the field of computer science and programming.</p>
+                <button>Select Course</button>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="course-card">
+                <h3>Mathematics for Machine Learning</h3>
+                <p>Explore the fundamental mathematics behind machine learning models and data analysis techniques.</p>
+                <button>Select Course</button>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="course-card">
+                <h3>Business Management</h3>
+                <p>Learn the core principles of business management, marketing, and finance in this comprehensive course.</p>
+                <button>Select Course</button>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="course-card">
+                <h3>Data Science & Analytics</h3>
+                <p>Gain insights into data analysis, visualization, and statistical methodologies for data-driven decision-making.</p>
+                <button>Select Course</button>
+            </div>
+
+            <!-- Add more course cards as needed -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#">&laquo; Prev</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next &raquo;</a>
+        </div>
+    </div>
+
+</body>
+</html>

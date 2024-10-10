@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses - Admin Dashboard</title>
+    <style>
+        /* Main Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 220px;
+            background-color: #2c3e50;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .navbar ul li {
+            margin: 15px 0;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #34495e;
+        }
+
+        /* Content Area */
+        .content {
+            margin-left: 240px;
+            padding: 30px;
+            background-color: #fff;
+            width: calc(100% - 240px);
+            min-height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Manage Courses Section */
+        .course-actions {
+            margin-bottom: 30px;
+        }
+
+        .course-actions button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course-actions button:hover {
+            background-color: #34495e;
+        }
+
+        /* Courses Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Action buttons in table */
+        .action-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .action-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Admin</h1>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Manage Users</a></li>
+            <li><a href="#">Manage Courses</a></li>
+            <li><a href="#">View Reports</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content">
+        <h2>Manage Courses</h2>
+
+        <!-- Course Actions (Add, Update) -->
+        <div class="course-actions">
+            <button onclick="addCourse()">Add Course</button>
+            <button onclick="updateCourse()">Update Course</button>
+        </div>
+
+        <!-- Courses Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Instructor</th>
+                    <th>Credits</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CS101</td>
+                    <td>Introduction to Computer Science</td>
+                    <td>This course introduces the basics of computer science.</td>
+                    <td>John Doe</td>
+                    <td>4</td>
+                    <td>
+                        <button class="action-btn">Edit</button>
+                        <button class="action-btn delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MTH202</td>
+                    <td>Calculus II</td>
+                    <td>Advanced calculus for math majors.</td>
+                    <td>Jane Smith</td>
+                    <td>3</td>
+                    <td>
+                        <button class="action-btn">Edit</button>
+                        <button class="action-btn delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more course rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

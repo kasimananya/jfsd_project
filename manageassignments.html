@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Assignments - Faculty Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            position: relative;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            background-color: #3b5998;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            margin: 0 0 20px 0;
+            font-size: 26px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #4e70b5;
+            transform: translateX(5px);
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 30px;
+            flex-grow: 1;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .assignment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .assignment-table th, .assignment-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .assignment-table th {
+            background-color: #3b5998;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .assignment-table td {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .assignment-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .assignment-actions a {
+            text-decoration: none;
+            color: #3b5998;
+            font-weight: bold;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .assignment-actions a:hover {
+            color: #000;
+        }
+
+        .add-assignment {
+            margin-top: 20px;
+        }
+
+        .add-assignment button {
+            background-color: #3b5998;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-assignment button:hover {
+            background-color: #4e70b5;
+        }
+
+        .no-assignments {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Faculty</h1>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">View Courses</a></li>
+            <li><a href="#">Manage Assignments</a></li>
+            <li><a href="#">View Grades</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Manage Assignments</h2>
+
+        <!-- Table for Managing Assignments -->
+        <table class="assignment-table">
+            <thead>
+                <tr>
+                    <th>Assignment Title</th>
+                    <th>Course</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Assignment 1</td>
+                    <td>Introduction to Computer Science</td>
+                    <td>October 10, 2024</td>
+                    <td>Open</td>
+                    <td class="assignment-actions">
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assignment 2</td>
+                    <td>Calculus II</td>
+                    <td>October 15, 2024</td>
+                    <td>Open</td>
+                    <td class="assignment-actions">
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assignment 3</td>
+                    <td>Physics I</td>
+                    <td>October 20, 2024</td>
+                    <td>Closed</td>
+                    <td class="assignment-actions">
+                        <a href="#">Edit</a>
+                        <a href="#">Delete</a>
+                    </td>
+                </tr>
+                <!-- More assignments can be added here -->
+            </tbody>
+        </table>
+
+        <!-- Button to Add New Assignment -->
+        <div class="add-assignment">
+            <button>Add New Assignment</button>
+        </div>
+
+        <!-- Message when there are no assignments -->
+        <!--
+        <div class="no-assignments">
+            <p>No assignments available at the moment.</p>
+        </div>
+        -->
+    </div>
+
+</body>
+</html>

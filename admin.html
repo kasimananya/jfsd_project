@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            position: relative;
+        }
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            background-color: #3b5998;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar h1 {
+            margin: 0 0 20px 0;
+            font-size: 26px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 15px 0;
+            position: relative;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .navbar ul li a:hover {
+            background-color: #4e70b5;
+            transform: translateX(5px);
+        }
+        .profile-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0; /* Align dropdown to the right */
+            top: 60px; /* Adjust based on the height of the profile container */
+            background-color: #3b5998;
+            min-width: 220px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #4e70b5;
+        }
+        .profile-container:hover .dropdown-content {
+            display: block; /* Show dropdown on hover */
+        }
+        .content {
+            margin-left: 240px;
+            padding: 30px;
+            flex-grow: 1;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .welcome-box {
+            background-color: transparent;
+            border: none;
+            padding: 20px;
+            width: 80%;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Admin</h1>
+        <ul>
+            <li><a href="#">Manage Users</a></li>
+            <li><a href="#">View Reports</a></li>
+            <li>
+                <a href="#">Manage Courses</a>
+                <div class="dropdown-content">
+                    <a href="#">Add Course</a>
+                    <a href="#">Remove Course</a>
+                    <a href="#">Update Course</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Students</a>
+                <div class="dropdown-content">
+                    <a href="#">Add Student</a>
+                    <a href="#">Remove Student</a>
+                    <a href="#">Update Courses</a>
+                    <a href="#">Remove Courses</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Faculty</a>
+                <div class="dropdown-content">
+                    <a href="#">Add Faculty</a>
+                    <a href="#">Remove Faculty</a>
+                    <a href="#">Update Faculty Schedule</a>
+                    <a href="#">Remove Faculty</a>
+                </div>
+            </li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-container">
+        <img src="C:\Users\KASIM ANANYA\Downloads\project.jpg" alt="Profile Picture">
+        <div class="dropdown">
+            <span>ADMIN NAME</span>
+            <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logs</a>
+                <a href="#">Reports</a>
+                <a href="#">Help</a>
+                <a href="#">Preferences</a>
+                <a href="#">Log out</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="welcome-box">
+            <h2>Welcome Admin!!!</h2>
+            <p>Manage your users and courses effectively through this dashboard.</p>
+        </div>
+    </div>
+
+</body>
+</html>
